@@ -24,7 +24,9 @@ Git     分布式版本控制系统
 时光机穿梭
 1、查看仓库当前状态
 	git status
-//查看到当前分支信息，以及有无需要add到暂存区或者commit到分支的操作。
+//查看到当前分支信息，以及有无需要add到暂存区或者commit到分支的操作，还会提醒你和远程分支差几个版本的更新，可以用以下命令更新：
+	git push origin master	
+//这里用的是master分支，origin就是远程仓库的默认名称。
 2、查看文件修改内容
 	git diff <filename>
 3、
