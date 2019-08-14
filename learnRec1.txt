@@ -1,0 +1,31 @@
+Git     分布式版本控制系统
+
+安装：
+	sudo apt-get install git
+安装完成后，需要设置：
+	git config --global user.name "SpyderXP"        //填写你的名字
+	git config --global user.email "18252026077@163.com"
+//这里填写的信息，将在后面每次的git log里看到,等于告知提交的机器是哪一台
+//这里用到的global参数，表示这台机器上所有的Git仓库都会使用这个配置信息
+
+
+创建版本库（仓库）repository
+1、创建一个空目录：
+	mkdir learngit
+2、通过git init命令将这个目录变成Git可以管理的仓库：
+	git init
+这个目录下会自动生成.git目录，这个目录用来跟踪管理版本库，切忌修改。
+3、将文件添加到版本库：
+假设我们已经有一个文件，该文件需要放到仓库目录下，否则git无法找到
+	git add <filename>
+这样就可以将文件提交到暂存区，然后提交到当前分支：
+	git commit -m "some message"	//这里可以填一些提交信息到日志
+
+时光机穿梭
+1、查看仓库当前状态
+	git status
+//查看到当前分支信息，以及有无需要add到暂存区或者commit到分支的操作。
+2、查看文件修改内容
+	git diff <filename>
+3、
+
