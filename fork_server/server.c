@@ -16,7 +16,10 @@
 
 void do_sig(int num) {
 	// 不断地回收子进程
-	while (waitpid(0, NULL, WNOHANG) > 0);
+	pid_t pid;
+	while ((pid = waitpid(0, NULL, WNOHANG)) > 0){
+		printf("child %d terminated.\n", pid);
+	}
 }
 
 int main(int argc, char *argv[]) {
