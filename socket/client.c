@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	bzero(&serv_addr, sizeof(serv_addr));
 	serv_addr.sin_family = AF_INET;
 	serv_addr.sin_port = htons(SERV_PORT);
-	// 将argv[1]中的IP地址以网络序存到后面的参数里
+	// 将argv[1]中的IP地址以网络序存到第三项参数里
 	inet_pton(AF_INET, argv[1], &serv_addr.sin_addr.s_addr);
 
 	connect(sfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr));
